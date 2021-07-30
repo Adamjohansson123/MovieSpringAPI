@@ -13,7 +13,7 @@ This API storage data on PostgreSQL database. To test the data you need to creat
 enter your user name and password at the 'spring.datasource.username:' field and 'spring.datasource.password:' field at 'application.properties' file located at 'src/main/resources' directory of this project(OBS. be sure that 'localhost:' port written at 'spring.datasource.url:' field matches your local PostgreSQL port). When credentials are entered and saved on the 'application.properties' file then you can run this Spring Boot project and test its endpoints with the seeded dataat database and the Postman collection file located at the 'assets' directory inside this project (Replace with desired ID numbers where {id} is found on request's url).  
 
 ## Database Diagram : 
-![](https://raw.githubusercontent.com/lfgn84/Assignment3/main/assets/psql-diagram.png?token=ANT34ULENQYOE3BIQWOAJ63BAPGZA)
+![](https://github.com/Adamjohansson123/MovieSpringAPI/blob/main/assets/psql-diagram.png?raw=true)
 
 
 
