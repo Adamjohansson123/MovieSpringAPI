@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "33c1ec6f-5d6a-4eac-90b0-26888c572d48",
+		"name": "Assignment3API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addMovie",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"\",\r\n    \"genre\": \"\",\r\n    \"year\": 2021,\r\n    \"director\": \"\",\r\n    \"picture\": \"\",\r\n    \"trailer\": \"\",\r\n    \"franchise\": {\"id\":1},\r\n    \"characters\" : []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/movies"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "getAllMovies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/movies"
+							},
+							"response": []
+						},
+						{
+							"name": "getMovie",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/movies/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCharactersInMovie",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/movies/getAllCharactersInMovie/{id}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "updateMovie",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Testing to update\",\r\n    \"genre\": \"Comedy\",\r\n    \"year\": 2021,\r\n    \"director\": \"Test\",\r\n    \"picture\": \"asfsdf\",\r\n    \"trailer\": \"sdfsdsf\",\r\n    \"characters\" : [{\"id\":1}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/movies"
+							},
+							"response": []
+						},
+						{
+							"name": "updateCharacterInMovie",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/movies/updateCharacterInMovie/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "updateCharactersInMovie",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/movies/updateCharacterInMovie/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "updateFranchiseInMovie",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/movies/updateFranchiseInMovie/{id}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "deleteMovie",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/movies/{id}"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Characters",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addCharacter",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"\",\r\n    \"alias\":\"\",\r\n    \"gender\":\"\",\r\n    \"picture\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/characters"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "getAllCharacters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/characters"
+							},
+							"response": []
+						},
+						{
+							"name": "getCharacter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/characters/{id}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "updateCharacter",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Testing to update\",\r\n    \"alias\": \"Batman\",\r\n    \"gender\": \"male\",\r\n    \"picture\": \"fdgdfgd\",\r\n    \"movies\": [{\"id\":1}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/characters"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "deleteCharacter",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/characters/{id}"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Franchises",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "addFranchise",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"\",\r\n    \"description\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/franchises"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "getAllFranchises",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/franchises"
+							},
+							"response": []
+						},
+						{
+							"name": "getFranchise",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/franchises/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "getAllMoviesInFranchise",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/franchises/getAllMoviesInFranchise/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCharactersInFranchise",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/franchises/getAllCharactersInFranchise/{id}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "updateFranchise",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Testing to updatee\",\r\n    \"description\": \"Description for testing\",\r\n    \"movies\": [{\"id\":1}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/franchises"
+							},
+							"response": []
+						},
+						{
+							"name": "updateMovieInFranchise",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "1",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/franchises/updateMovieInFranchise/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "updateMoviesInFranchise",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/franchises/updateMoviesInFranchise/{id}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "deleteFranchise",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/franchises/{id}"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
